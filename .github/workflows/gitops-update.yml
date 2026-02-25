@@ -7,16 +7,6 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Debug Key
-        shell: bash
-        env:
-          PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
-          APP_ID: ${{ secrets.APP_ID }}
-        run: |
-          echo "Key length: ${#PRIVATE_KEY}"
-          echo "First 20 chars: ${PRIVATE_KEY:0:20}" 
-          echo "$APP_ID
-          
       - name: Update Tag
         uses: dopxlab/gitops-update@v1
         with:
