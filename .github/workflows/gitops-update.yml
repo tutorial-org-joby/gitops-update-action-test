@@ -12,7 +12,7 @@ jobs:
         with:
           app_id: ${{ secrets.APP_ID }}
           installation_id: ${{ secrets.INSTALLATION_ID }}
-          private_key: ${{ secrets.APP_PRIVATE_KEY }}
+          private_key: ${{ env.APP_PRIVATE_KEY }}
           repository: tutorial-org-joby/gitops-update-action-test-target
           branch: main
           file_path: tag.yaml
